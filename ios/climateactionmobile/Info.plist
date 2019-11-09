@@ -66,7 +66,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow Climate Action to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow Climate Action to access your device's accelerometer</string>
+	<string>Allow Climate Action to access your device&apos;s accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Give Climate Action periences permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>

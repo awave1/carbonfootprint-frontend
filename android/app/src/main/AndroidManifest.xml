@@ -4,6 +4,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+     <meta-data
+       android:name="com.google.android.geo.API_KEY"
+       android:value="AIzaSyBZm2jCNMx_VZt0s09nquWIHik2l1woFQU"/>
+
     <!-- OPTIONAL PERMISSIONS, REMOVE WHATEVER YOU DO NOT NEED -->
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />

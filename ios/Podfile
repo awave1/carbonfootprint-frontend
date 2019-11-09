@@ -3,6 +3,8 @@ platform :ios, '10.0'
 require_relative '../node_modules/react-native-unimodules/cocoapods'
 
 target 'climateactionmobile' do
+  rn_maps_path = '../node_modules/react-native-maps'
+
   # Pods for climateactionmobile
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'Core',
@@ -30,6 +32,22 @@ target 'climateactionmobile' do
   pod 'RNReanimated', :podspec => '../node_modules/react-native-reanimated/RNReanimated.podspec'
   pod 'RNScreens', :path => '../node_modules/react-native-screens'
 
-  use_unimodules!
+  pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
 
+  use_unimodules!
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'react-native-google-maps'
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+      end
+    end
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
 end

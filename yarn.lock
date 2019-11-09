@@ -6942,6 +6942,11 @@ realpath-native@^1.1.0:
   dependencies:
     util.promisify "^1.0.0"
 
+reanimated-bottom-sheet@^1.0.0-alpha.16:
+  version "1.0.0-alpha.16"
+  resolved "https://registry.yarnpkg.com/reanimated-bottom-sheet/-/reanimated-bottom-sheet-1.0.0-alpha.16.tgz#00bf895a788df2fd16d25a570afdc8ceae5ee8c0"
+  integrity sha512-wAdyCzXbkshJp4hHkXseKC2H59Hn6c/VrH98Bn74C8Mb8ZmRqQLF9KYiOMWIMFV9fq4LzywdKfIjrNfpmrGaMA==
+
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"

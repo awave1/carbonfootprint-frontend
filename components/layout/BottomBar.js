@@ -1,47 +1,49 @@
 /* eslint-disable react/no-unused-state */
 import * as React from 'react';
-import { Text } from 'react-native';
-import { BottomNavigation, Title, View } from 'react-native-paper';
+import { View, Text, Container, StyleSheet } from 'react-native';
+import { BottomNavigation } from 'react-native-material-ui';
 import SummarySheet from '../SummarySheet';
 
-const WalkRoute = () => <SummarySheet />;
-
-const TransitRoute = () => <Text>Albums</Text>;
-
-const CarRoute = () => <Text>Recents</Text>;
-
+const styles = StyleSheet.create({
+  container: {
+    zIndex: 2,
+  },
+});
 export default class BottomBar extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      index: 0,
-      routes: [
-        { key: 'walk', title: 'Walk', icon: 'walk' },
-        { key: 'transit', title: 'Transit', icon: 'train' },
-        { key: 'car', title: 'Car', icon: 'car' },
-      ],
+      active: 'transit',
     };
-
-    this.renderScene = BottomNavigation.SceneMap({
-      walk: WalkRoute,
-      transit: TransitRoute,
-      car: CarRoute,
-    });
-
-    this.handleIndexChange = this.handleIndexChange.bind(this);
-  }
-
-  handleIndexChange(index) {
-    this.setState({ index });
   }
 
   render() {
+    const { active } = this.state;
     return (
-      <BottomNavigation
-        navigationState={this.state}
-        onIndexChange={this.handleIndexChange}
-        renderScene={this.renderScene}
-      />
+      <>
+        <SummarySheet />
+        <BottomNavigation active={active} hidden={false}>
+          <BottomNavigation.Action
+            key="walk"
+            icon="directions-walk"
+            label="Walk"
+            onPress={() => this.setState({ active: 'walk' })}
+          />
+          <BottomNavigation.Action
+            key="transit"
+            icon="directions-transit"
+            label="Transit"
+            onPress={() => this.setState({ active: 'transit' })}
+          />
+          <BottomNavigation.Action
+            key="car"
+            icon="directions-car"
+            label="Car"
+            onPress={() => this.setState({ active: 'car' })}
+          />
+        </BottomNavigation>
+      </>
     );
   }
 }

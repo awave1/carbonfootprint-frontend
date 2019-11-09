@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   map: {
-    ...StyleSheet.absoluteFillObject,
+    flex: 38,
+    zIndex: 1,
   },
   searchFieldTop: {
-    marginTop: 38,
     marginLeft: 16,
     marginRight: 16,
   },
@@ -26,11 +26,21 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 16,
   },
+  searchFields: {
+    backgroundColor: 'transparent',
+    paddingTop: 32,
+    flex: 1,
+    zIndex: 2,
+  },
 });
 
 const App = () => (
   <PaperProvider>
     <View style={styles.container}>
+      <View style={styles.searchFields}>
+        <TextInput style={styles.searchFieldTop} mode="outlined" label="From" />
+        <TextInput style={styles.searchField} mode="outlined" label="To" />
+      </View>
       <MapView
         provider={PROVIDER_GOOGLE}
         style={styles.map}
@@ -41,10 +51,6 @@ const App = () => (
           longitudeDelta: 0.0121,
         }}
       />
-      <View>
-        <TextInput style={styles.searchFieldTop} mode="outlined" label="From" />
-        <TextInput style={styles.searchField} mode="outlined" label="To" />
-      </View>
       <BottomBar />
     </View>
   </PaperProvider>

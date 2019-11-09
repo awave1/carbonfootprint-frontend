@@ -21,7 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [GMSServices provideAPIKey:@"AIzaSyCnUA1uejYjiIrl76LqCdO56TZXkRiKUQw"];
+  NSString *MAPS_KEY = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"MAPS_API_KEY"];
+  [GMSServices provideAPIKey: MAPS_KEY];
 
   self.moduleRegistryAdapter = [[UMModuleRegistryAdapter alloc] initWithModuleRegistryProvider:[[UMModuleRegistryProvider alloc] init]];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];

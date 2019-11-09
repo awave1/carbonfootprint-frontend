@@ -1,0 +1,11 @@
+//
+//  debug.xcconfig
+//  climateactionmobile
+//
+//  Created by awave on 2019-11-09.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+MAPS_API_KEY = AIzaSyCnUA1uejYjiIrl76LqCdO56TZXkRiKUQw

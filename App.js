@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import Flexbox from 'flexbox-react';
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -18,10 +19,17 @@ const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
   },
+  search: {
+    ...StyleSheet.absoluteFillObject,
+    // display: flex;
+    // flex- direction:
+
+  }
 });
 
 const App = () => (
   <View style={styles.container}>
+    <View style={styles.search} >From</View>
     <MapView
       provider={PROVIDER_GOOGLE}
       style={styles.map}

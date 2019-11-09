@@ -5,6 +5,20 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prefer-stateless-function": [
+      1,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "no-use-before-define": [1],
+    "no-unused-vars": [1]
   }
 }

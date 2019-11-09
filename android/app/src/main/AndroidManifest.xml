@@ -6,7 +6,7 @@
 
      <meta-data
        android:name="com.google.android.geo.API_KEY"
-       android:value="API_KEY"/>
+       android:value="@string/MAPS_KEY"/>
 
     <!-- OPTIONAL PERMISSIONS, REMOVE WHATEVER YOU DO NOT NEED -->
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />

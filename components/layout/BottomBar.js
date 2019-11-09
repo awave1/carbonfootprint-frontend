@@ -1,45 +1,44 @@
-/* eslint-disable react/destructuring-assignment */
-import React, { Component } from 'react';
-import { BottomNavigation } from 'react-native-material-ui';
+/* eslint-disable react/no-unused-state */
+import * as React from 'react';
+import { BottomNavigation, Text } from 'react-native-paper';
 
-class BottomBar extends Component {
+const WalkRoute = () => <Text>Carbon Summary</Text>;
+
+const TransitRoute = () => <Text>Albums</Text>;
+
+const CarRoute = () => <Text>Recents</Text>;
+
+export default class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'walk',
+      index: 1,
+      routes: [
+        { key: 'walk', title: 'Walk', icon: 'walk' },
+        { key: 'transit', title: 'Transit', icon: 'train' },
+        { key: 'car', title: 'Car', icon: 'car' },
+      ],
     };
+    this.renderScene = BottomNavigation.SceneMap({
+      walk: WalkRoute,
+      transit: TransitRoute,
+      car: CarRoute,
+    });
+
+    this.handleIndexChange = this.handleIndexChange.bind(this);
+  }
+
+  handleIndexChange(index) {
+    this.setState({ index });
   }
 
   render() {
     return (
-      <BottomNavigation active={this.state.active} hidden={false}>
-        <BottomNavigation.Action
-          key="walk"
-          icon="directions-walk"
-          label="Walk"
-          onPress={() => this.setState({ active: 'walk' })}
-        />
-        <BottomNavigation.Action
-          key="car"
-          icon="directions-car"
-          label="Car"
-          onPress={() => this.setState({ active: 'car' })}
-        />
-        <BottomNavigation.Action
-          key="transit"
-          icon="directions-transit"
-          label="Transit"
-          onPress={() => this.setState({ active: 'transit' })}
-        />
-        <BottomNavigation.Action
-          key="bike"
-          icon="directions-bike"
-          label="Bike"
-          onPress={() => this.setState({ active: 'bike' })}
-        />
-      </BottomNavigation>
+      <BottomNavigation
+        navigationState={this.state}
+        onIndexChange={this.handleIndexChange}
+        renderScene={this.renderScene}
+      />
     );
   }
 }
-
-export default BottomBar;

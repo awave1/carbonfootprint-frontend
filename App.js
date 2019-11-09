@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { Platform, TextInput, StyleSheet, Text, View } from 'react-native';
+import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
 import BottomBar from './components/layout/BottomBar';
 
 const instructions = Platform.select({
@@ -14,15 +14,29 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   map: {
-    ...StyleSheet.absoluteFillObject,
+    flex: 1,
   },
-  search: {
-    ...StyleSheet.absoluteFillObject,
+  inputContainer: {
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    width: '100%',
+  },
+  inputSearch: {
+    borderColor: 'white',
+    height: 40,
+    width: '90%',
+    borderRadius: 5,
   },
 });
 
 const App = () => (
   <View style={styles.container}>
+    {/* <Callout> */}
+    <View style={styles.inputContainer}>
+      <TextInput style={styles.inputSearch} placeholder="From" />
+      <TextInput style={styles.inputSearch} placeholder="To" />
+    </View>
+    {/* </Callout> */}
     <MapView
       provider={PROVIDER_GOOGLE}
       style={styles.map}

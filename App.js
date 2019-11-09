@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, TextInput, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
+import { TextInput, Provider as PaperProvider, Provider } from 'react-native-paper';
 import BottomBar from './components/layout/BottomBar';
 
 const instructions = Platform.select({
@@ -14,41 +15,39 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   map: {
-    flex: 1,
+    ...StyleSheet.absoluteFillObject,
   },
-  inputContainer: {
-    justifyContent: 'flex-start',
-    flexDirection: 'column',
-    width: '100%',
+  searchFieldTop: {
+    marginTop: 38,
+    marginLeft: 16,
+    marginRight: 16,
   },
-  inputSearch: {
-    borderColor: 'white',
-    height: 40,
-    width: '90%',
-    borderRadius: 5,
+  searchField: {
+    marginLeft: 16,
+    marginRight: 16,
   },
 });
 
 const App = () => (
-  <View style={styles.container}>
-    {/* <Callout> */}
-    <View style={styles.inputContainer}>
-      <TextInput style={styles.inputSearch} placeholder="From" />
-      <TextInput style={styles.inputSearch} placeholder="To" />
+  <PaperProvider>
+    <View style={styles.container}>
+      <MapView
+        provider={PROVIDER_GOOGLE}
+        style={styles.map}
+        region={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.015,
+          longitudeDelta: 0.0121,
+        }}
+      />
+      <View>
+        <TextInput style={styles.searchFieldTop} mode="outlined" label="From" />
+        <TextInput style={styles.searchField} mode="outlined" label="To" />
+      </View>
+      <BottomBar />
     </View>
-    {/* </Callout> */}
-    <MapView
-      provider={PROVIDER_GOOGLE}
-      style={styles.map}
-      region={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.015,
-        longitudeDelta: 0.0121,
-      }}
-    />
-    <BottomBar />
-  </View>
+  </PaperProvider>
 );
 
 export default App;

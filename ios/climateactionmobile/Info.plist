@@ -66,7 +66,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow Climate Action to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow Climate Action to access your device&apos;s accelerometer</string>
+	<string>Allow Climate Action to access your device's accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Give Climate Action periences permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -75,5 +75,24 @@
 	<string>$(MAPS_API_KEY)</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>Allow Climate Action to access your reminders</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+	</array>
 </dict>
 </plist>

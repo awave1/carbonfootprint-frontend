@@ -58,3 +58,5 @@ buck-out/
 
 android/app/src/main/res/values/api.xml
 ios/debug.xcconfig
+
+.expo/

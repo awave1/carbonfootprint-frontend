@@ -20,8 +20,6 @@ const styles = StyleSheet.create({
   },
   search: {
     ...StyleSheet.absoluteFillObject,
-    // display: flex;
-    // flex- direction:
   },
 });
 

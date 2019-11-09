@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import BottomBar from './components/layout/BottomBar';
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -35,6 +36,7 @@ const App = () => (
         longitudeDelta: 0.0121,
       }}
     />
+    <BottomBar />
   </View>
 );
 

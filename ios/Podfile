@@ -37,6 +37,8 @@ target 'climateactionmobile' do
   pod 'Google-Maps-iOS-Utils'
 
   use_unimodules!
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end
 
 post_install do |installer|

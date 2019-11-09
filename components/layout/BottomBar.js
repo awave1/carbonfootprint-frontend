@@ -15,21 +15,26 @@ class BottomBar extends Component {
       <BottomNavigation active={this.state.active} hidden={false}>
         <BottomNavigation.Action
           key="walk"
-          icon="walk"
-          label="walk"
+          icon="directions-walk"
+          label="Walk"
           onPress={() => this.setState({ active: 'walk' })}
         />
-        <BottomNavigation.Action key="car" icon="car" label="car" onPress={() => this.setState({ active: 'car' })} />
+        <BottomNavigation.Action
+          key="car"
+          icon="directions-car"
+          label="Car"
+          onPress={() => this.setState({ active: 'car' })}
+        />
         <BottomNavigation.Action
           key="transit"
-          icon="transit"
-          label="transit"
+          icon="directions-transit"
+          label="Transit"
           onPress={() => this.setState({ active: 'transit' })}
         />
         <BottomNavigation.Action
           key="bike"
-          icon="bike"
-          label="bike"
+          icon="directions-bike"
+          label="Bike"
           onPress={() => this.setState({ active: 'bike' })}
         />
       </BottomNavigation>

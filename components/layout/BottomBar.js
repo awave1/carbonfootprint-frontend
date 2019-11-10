@@ -38,7 +38,9 @@ export default class BottomBar extends React.Component {
       'https://carbonfootprint-backend.herokuapp.com/api/routeAndEmissions?origin=51.0393044,-114.136155&destination=51.0516244,-114.0532057'
     );
 
-    console.log(response);
+    const json = await response.json();
+
+    console.log(json);
   }
 
   async componentDidMount() {

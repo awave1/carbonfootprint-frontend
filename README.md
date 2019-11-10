@@ -9,7 +9,7 @@
 
 <img alt="Carbon Tracker App: Main Screen" src="./screenshots/app.png" width="200px" />
 
-### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
+### 🏠 [Homepage](https://github.com/awave1/carbonfootprint-frontend)
 
 Our backend is located here [LMulvey/carbonfootprint-backend](https://github.com/LMulvey/carbonfootprint-backend)
 

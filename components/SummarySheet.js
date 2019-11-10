@@ -61,12 +61,11 @@ const styles = StyleSheet.create({
   },
 });
 
-function SummarySheet() {
+function SummarySheet({ title }) {
   const renderContent = () => {
     return (
       <View style={styles.panel}>
-        <Text style={styles.panelTitle}>San Francisco Airport</Text>
-        <Text style={styles.panelSubtitle}>International Airport - 40 miles away</Text>
+        <Text style={styles.panelTitle}>{title}</Text>
       </View>
     );
   };

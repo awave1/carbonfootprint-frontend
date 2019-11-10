@@ -15,14 +15,25 @@ export default class BottomBar extends React.Component {
 
     this.state = {
       active: 'transit',
+      modes: {
+        walk: {
+          title: 'Walk',
+        },
+        transit: {
+          title: 'Transit',
+        },
+        car: {
+          title: 'Car',
+        },
+      },
     };
   }
 
   render() {
-    const { active } = this.state;
+    const { active, modes } = this.state;
     return (
       <>
-        <SummarySheet />
+        <SummarySheet title={modes[active].title} />
         <BottomNavigation active={active} hidden={false}>
           <BottomNavigation.Action
             key="walk"

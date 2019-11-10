@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
     color: 'gray',
     height: 30,
     marginBottom: 10,
+    flexWrap: 'wrap',
+    flex: 0.8,
   },
   panelButton: {
     padding: 20,

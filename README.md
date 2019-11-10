@@ -8,7 +8,7 @@
   </a>
 </p>
 
-> Carbon footprint tracker
+> Code The Change YYC Hackathon project: Carbon footprint tracker, powered by Google Maps API.
 
 ### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
 

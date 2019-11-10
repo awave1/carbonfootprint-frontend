@@ -85,7 +85,7 @@ function SummarySheet({ title }) {
     <View style={styles.container}>
       <BottomSheet
         ref={bs}
-        snapPoints={[500, 50, 50]}
+        snapPoints={[250, 50, 50]}
         renderContent={renderContent}
         renderHeader={renderHeader}
         initialSnap={1}

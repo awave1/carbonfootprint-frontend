@@ -1,3 +1,4 @@
+/* eslint-disable react/sort-comp */
 /* eslint-disable react/no-unused-state */
 import * as React from 'react';
 import { View, Text, Container, StyleSheet } from 'react-native';
@@ -27,6 +28,22 @@ export default class BottomBar extends React.Component {
         },
       },
     };
+
+    // this.ontabclicked;
+  }
+
+  async ontabclicked(activeTab) {
+    this.setState({ active: activeTab });
+    const response = await fetch(
+      'https://carbonfootprint-backend.herokuapp.com/api/routeAndEmissions?origin=51.0393044,-114.136155&destination=51.0516244,-114.0532057'
+    );
+
+    console.log(response);
+  }
+
+  async componentDidMount() {
+    // eslint-disable-next-line react/destructuring-assignment
+    await this.ontabclicked(this.state.active);
   }
 
   render() {
@@ -39,19 +56,19 @@ export default class BottomBar extends React.Component {
             key="walk"
             icon="directions-walk"
             label="Walk"
-            onPress={() => this.setState({ active: 'walk' })}
+            onPress={async () => this.ontabclicked('walk')}
           />
           <BottomNavigation.Action
             key="transit"
             icon="directions-transit"
             label="Transit"
-            onPress={() => this.setState({ active: 'transit' })}
+            onPress={async () => this.ontabclicked('transit')}
           />
           <BottomNavigation.Action
             key="car"
             icon="directions-car"
             label="Car"
-            onPress={() => this.setState({ active: 'car' })}
+            onPress={async () => this.ontabclicked('car')}
           />
         </BottomNavigation>
       </>

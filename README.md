@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Carbon Footprint Tracker 👋</h1>
+<h1 align="center">Carbon Footprint Tracker App 🌎</h1>
 <p>
   <a href="github.com/awave1/carbonfootprint-frontend/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
@@ -11,7 +11,7 @@
 
 Our backend is located here [LMulvey/carbonfootprint-backend](https://github.com/LMulvey/carbonfootprint-backend)
 
-![Carbon Tracker App: Main Screen][./screenshots/app.png]
+![Carbon Tracker App: Main Screen](./screenshots/app.png)
 
 ## Install
 

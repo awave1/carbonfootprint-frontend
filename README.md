@@ -1,14 +1,13 @@
-<h1 align="center">Welcome to Carbon Footprint Tracker 👋</h1>
+<h1 align="center">Carbon Footprint Tracker App 🌎</h1>
 <p>
-  <a href="https://www.npmjs.com/package/Carbon Footprint" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/Carbon Footprint.svg">
-  </a>
   <a href="github.com/awave1/carbonfootprint-frontend/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
 </p>
 
 > Code The Change YYC Hackathon project: Carbon footprint tracker, powered by Google Maps API.
+
+<img alt="Carbon Tracker App: Main Screen" src="./screenshots/app.png" width="200px" />
 
 ### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
 

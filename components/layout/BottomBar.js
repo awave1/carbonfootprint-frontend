@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/sort-comp */
 /* eslint-disable react/no-unused-state */
 import * as React from 'react';
@@ -16,6 +17,7 @@ export default class BottomBar extends React.Component {
 
     this.state = {
       active: 'transit',
+      emissions: '0',
       modes: {
         walk: {
           title: 'Walk',
@@ -38,9 +40,23 @@ export default class BottomBar extends React.Component {
       'https://carbonfootprint-backend.herokuapp.com/api/routeAndEmissions?origin=51.0393044,-114.136155&destination=51.0516244,-114.0532057'
     );
 
-    const json = await response.json();
+    let status;
+    if (activeTab === 'car') {
+      status = 'DRIVING';
+    } else if (activeTab === 'walk') {
+      status = 'WALKING';
+    } else if (activeTab === 'transit') {
+      status = 'TRANSIT';
+    }
 
-    console.log(json);
+    const resp = await response.json();
+    const forTransport = resp[status];
+
+    // console.log(resp[status]);
+    // console.log(resp[status][]);
+    // eslint-disable-next-line react/destructuring-assignment
+    this.setState({ emissions: forTransport.totalEmissionsForRoute });
+    this.props.bottomBarClick(forTransport.polyCoords);
   }
 
   async componentDidMount() {
@@ -49,10 +65,10 @@ export default class BottomBar extends React.Component {
   }
 
   render() {
-    const { active, modes } = this.state;
+    const { active, modes, emissions } = this.state;
     return (
       <>
-        <SummarySheet title={modes[active].title} />
+        <SummarySheet title={modes[active].title} txt={emissions} />
         <BottomNavigation active={active} hidden={false}>
           <BottomNavigation.Action
             key="walk"

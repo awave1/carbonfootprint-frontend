@@ -4,6 +4,7 @@ import { Platform, StyleSheet, Text, View, Alert } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
 import { TextInput, Provider as PaperProvider, Provider } from 'react-native-paper';
 // import Geolocation from '@react-native-community/geolocation';
+import Polyline from '@mapbox/polyline';
 import BottomBar from './components/layout/BottomBar';
 
 const instructions = Platform.select({
@@ -68,25 +69,30 @@ class App extends Component {
     // this.watchID !== undefined && Geolocation.clearWatch(this.watchID);
   }
 
+  bottomBarClick(coords) {
+    this.setState({
+      coords,
+    });
+  }
+
   render() {
+    const { coords } = this.state;
     return (
       <PaperProvider>
         <View style={styles.container}>
-          <View style={styles.searchFields}>
-            <TextInput style={styles.searchFieldTop} mode="outlined" label="From" />
-            <TextInput style={styles.searchField} mode="outlined" label="To" />
-          </View>
           <MapView
             provider={PROVIDER_GOOGLE}
             style={styles.map}
             region={{
-              latitude: 37.78825,
-              longitude: -122.4324,
-              latitudeDelta: 0.015,
-              longitudeDelta: 0.0121,
+              latitude: 51.0447,
+              longitude: -114.0719,
+              latitudeDelta: 0.03,
+              longitudeDelta: 0.05,
             }}
-          />
-          <BottomBar />
+          >
+            <MapView.Polyline coordinates={coords} strokeWidth={2} strokeColor="red" />
+          </MapView>
+          <BottomBar bottomBarClick={c => this.bottomBarClick(c)} />
         </View>
       </PaperProvider>
     );

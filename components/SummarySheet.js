@@ -61,11 +61,14 @@ const styles = StyleSheet.create({
   },
 });
 
-function SummarySheet({ title }) {
+function SummarySheet({ title, txt }) {
   const renderContent = () => {
     return (
       <View style={styles.panel}>
         <Text style={styles.panelTitle}>{title}</Text>
+        <Text style={styles.panelSubtitle}>
+          {`${txt} grams of CO2 (or CO2 equivalent) emitted during transportation ${title} on that route`}
+        </Text>
       </View>
     );
   };
@@ -88,7 +91,7 @@ function SummarySheet({ title }) {
         snapPoints={[250, 50, 50]}
         renderContent={renderContent}
         renderHeader={renderHeader}
-        initialSnap={1}
+        initialSnap={0}
       />
     </View>
   );

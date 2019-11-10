@@ -39,6 +39,8 @@ target 'climateactionmobile' do
   use_unimodules!
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
+
 end
 
 post_install do |installer|

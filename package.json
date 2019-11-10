@@ -8,6 +8,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/geolocation": "^2.0.2",
     "expo": "^35.0.0",
     "flexbox-react": "^4.4.0",
     "react": "16.8.3",

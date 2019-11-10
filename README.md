@@ -7,11 +7,11 @@
 
 > Code The Change YYC Hackathon project: Carbon footprint tracker, powered by Google Maps API.
 
+<img alt="Carbon Tracker App: Main Screen" src="./screenshots/app.png" width="200px" />
+
 ### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
 
 Our backend is located here [LMulvey/carbonfootprint-backend](https://github.com/LMulvey/carbonfootprint-backend)
-
-![Carbon Tracker App: Main Screen](./screenshots/app.png)
 
 ## Install
 

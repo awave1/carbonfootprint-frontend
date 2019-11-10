@@ -12,6 +12,8 @@
 
 ### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
 
+Our backend is located here [LMulvey/carbonfootprint-backend](https://github.com/LMulvey/carbonfootprint-backend)
+
 ## Install
 
 ```sh

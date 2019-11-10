@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import BottomSheet from 'reanimated-bottom-sheet';
 
 const styles = StyleSheet.create({
@@ -8,15 +8,8 @@ const styles = StyleSheet.create({
     flex: 1,
     zIndex: 3,
   },
-  panelContainer: {
-    // position: 'absolute',
-    // top: 0,
-    // bottom: 0,
-    // left: 0,
-    // right: 0,
-  },
   panel: {
-    height: 600,
+    height: 200,
     padding: 20,
     backgroundColor: '#ffffff',
   },

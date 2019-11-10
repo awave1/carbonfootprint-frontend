@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Carbon Footprint 👋</h1>
+<h1 align="center">Welcome to Carbon Footprint Tracker 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/Carbon Footprint" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/Carbon Footprint.svg">

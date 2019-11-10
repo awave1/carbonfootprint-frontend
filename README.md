@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to Carbon Footprint Tracker 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/Carbon Footprint" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/Carbon Footprint.svg">
-  </a>
   <a href="github.com/awave1/carbonfootprint-frontend/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -13,6 +10,8 @@
 ### 🏠 [Homepage](github.com/awave1/carbonfootprint-frontend)
 
 Our backend is located here [LMulvey/carbonfootprint-backend](https://github.com/LMulvey/carbonfootprint-backend)
+
+![Carbon Tracker App: Main Screen][./screenshots/app.png]
 
 ## Install
 

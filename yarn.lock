@@ -3076,7 +3076,7 @@ expo-asset@~7.0.0:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-constants@~7.0.0:
+expo-constants@^7.0.1, expo-constants@~7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-7.0.1.tgz#87be02b6dae5c44a3246537452a0d77af15d46bf"
   integrity sha512-n9S6lsEfTAhLY+x/Yrtc1rvVUhuEF+CcSWr/reAIGtk35+PYrAKfV4pbetRtqX9tl947bJv7kBQX6jpwYpeIpQ==
@@ -3107,14 +3107,14 @@ expo-linear-gradient@~7.0.0:
   resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-7.0.1.tgz#86b8f22cb76fb1594cce6527c22e3182c7e98b6c"
   integrity sha512-YJsvA7nx8sMcV1+XhIsqT5+tyHhJi87AxgFW4fBlvUr9gAXhPMvUwkNMPPIkyOpKiEMPuQ7yWS29qwZdOHBGFQ==
 
-expo-location@~7.0.0:
+expo-location@^7.0.0, expo-location@~7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-7.0.0.tgz#de5818f828354c681a173471e4dc25ec795a9b42"
   integrity sha512-7iWg0j6+DXeO/bVLJEbGBmvebPSbIJNOewfHoyhvdo+13Q7L94SflcggT349WbqNsFJHVcAGC6Unr8VvXcUDbw==
   dependencies:
     invariant "^2.2.4"
 
-expo-permissions@~7.0.0:
+expo-permissions@^7.0.0, expo-permissions@~7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-7.0.0.tgz#f4135c3cf8e49c673a9a714459a1eb2b40fe2092"
   integrity sha512-C+qyVz+pdZO4YpVR2HSC3gsBZg0Qb8brCFgzmDmWcAtgrOiHClaLPdhI2XtQuGh8ubXcKPUGZp++UCEGiG0Jxg==

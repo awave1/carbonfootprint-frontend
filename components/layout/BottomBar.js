@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BottomNavigation } from 'react-native-material-ui';
 import SummarySheet from '../SummarySheet';
 
-function BottomBar({ bottomBarClick }) {
+function BottomBar({ bottomBarClick, origin }) {
   const [activeTab, setActiveTab] = useState('transit');
   const [modes, setModes] = useState({
     walk: {
@@ -33,7 +33,7 @@ function BottomBar({ bottomBarClick }) {
   async function fetchEmissionsAndRoutes(tab) {
     const testLocation = '51.0516244,-114.0532057';
     const response = await fetch(
-      `https://carbonfootprint-backend.herokuapp.com/api/routeAndEmissions?origin=51.0393044,-114.136155&destination=${testLocation}`
+      `https://carbonfootprint-backend.herokuapp.com/api/routeAndEmissions?origin=${origin}&destination=${testLocation}`
     );
 
     const resp = await response.json();
